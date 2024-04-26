@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션 만들기</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width:100%; overflow-x:hidden; }
+    ul { list-style:none; }
+    a { text-decoration: none; color:#333; }
+
+    .clr-fix::after { content: ""; display: block; clear: both; }
+
+    #gnb3 { position:fixed; left:50%; transform: translateX(-50%);  width: 700px; }
+    .menu { margin: 0 auto; padding: 0 auto; display: block; }
+    .menu > li { float: left; width: 33.3%; text-align: center; margin-top: 30px; margin-bottom: 30px; }
+    #gnb3 a.dp1 { display: block; font-weight: bold; font-size:24px; width:calc(width)}
+    #gnb3 a.dp2 { display: block; margin-top: 20px; font-size: 18px; }
+    #gnb3 li:hover a.dp2 { display: block; }
+    </style>
+</head>
+<body>
+    <hr>
+    <!-- nav#gnb3>ul.menu>li*3>a.dp1{메인$}+(ul.sub>li*4>a.dp2{서브$$}) -->
+    <nav id="gnb3">
+        <ul class="menu">
+            <li class="clr-fix::after">
+                <a href="" class="dp1">INTRO</a>
+                <ul class="sub">
+                    <li><a href="" class="dp2">지명 유래</a></li>
+                    <li><a href="" class="dp2">지역 특징</a></li>
+                    <li><a href="" class="dp2">연혁</a></li>
+                    <li><a href="" class="dp2">오시는 길</a></li>
+                </ul>
+            </li>
+            <li class="clr-fix::after">
+                <a href="" class="dp1">TOUR</a>
+                <ul class="sub">
+                    <li><a href="" class="dp2">교통편 안내</a></li>
+                    <li><a href="" class="dp2">주요 시설</a></li>
+                    <li><a href="" class="dp2">어디서 놀지?</a></li>
+                </ul>
+            </li>
+            <li class="clr-fix::after">
+                <a href="" class="dp1">COMMUNITY</a>
+                <ul class="sub">
+                    <li><a href="" class="dp2">공지사항</a></li>
+                    <li><a href="" class="dp2">자료실</a></li>
+                    <li><a href="" class="dp2">묻고 답하기</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
