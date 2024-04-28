@@ -1,0 +1,203 @@
+    <style>
+    /* Reset CSS */
+    body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+
+    /* 전체 스타일링 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333; /* 텍스트 색상 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 20px;
+    font-size: 16px;
+    position: relative; /* 서브메뉴를 위해 상대적 위치 지정 */
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 서브메뉴 스타일 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-menu li {
+    margin-right: 20px;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.related-links {
+    margin-top: 20px;
+}
+
+.related-links a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="logo">
+            <a href="#"><img src="favicon.ico" alt="Main Page"></a>
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="#">INTRO</a></li>
+                <li class="menu-item"><a href="#">TOUR</a></li>
+                <li class="menu-item"><a href="#">COMMUNITY</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </header>
+
+    <!-- 첫 페이지 배경 영역 -->
+    <div class="carousel">
+        <!-- 이미지 3장 -->
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <button class="prev">이전</button>
+        <button class="next">다음</button>
+    </div>
+
+    <!-- 2페이지 - NOTICE 페이지 -->
+    <div class="notice-page">
+        <!-- 공지사항 카드 -->
+        <div class="notice-card">
+            <h3>공지사항 제목</h3>
+            <p>공지사항 내용...</p>
+            <a href="#">자세히 보기</a>
+        </div>
+        <!-- 여러 개의 카드 추가 가능 -->
+        <button class="notice-link">공지사항 바로가기</button>
+    </div>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#">INTRO</a></li>
+                <li><a href="#">TOUR</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </div>
+        <div class="legal-links">
+            <a href="#">회원약관</a>
+            <a href="#">개인정보처리방침</a>
+        </div>
+        <div class="contact-info">
+            <p>주소: 서울시 노원구 xxx동 xxx번지</p>
+            <p>전화번호: 02-1234-5678</p>
+            <p>이메일: example@example.com</p>
+        </div>
+        <div class="related-links">
+            <div class="dropdown">
+                <button class="dropbtn">동주민센터</button>
+                <div class="dropdown-content">
+                    <a href="#">공릉1동주민센터</a>
+                    <a href="#">공릉2동주민센터</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">유관기관</button>
+                <div class="dropdown-content">
+                    <a href="#">노원 어린이급식관리지원센터</a>
+                    <a href="#">공릉종합사회복지관</a>
+                    <a href="#">정부/지자체 조직도</a>
+                </div>
+            </div>
+            <a href="#">인스타그램</a>
+            <a href="#">유튜브</a>
+            <a href="#">페이스북</a>
+            <a href="#">X 페이지</a>
+        </div>
+    </footer>
